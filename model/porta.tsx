@@ -5,39 +5,42 @@ export default class PortaModel {
     #selecionada: boolean
     #aberta: boolean
 
-    constructor(numero: number, temPresente = false, selecionada = false, aberta = false){
+    constructor(numero: number, temPresente = false, selecionada = false, aberta = false) {
         this.#numero = numero
         this.#temPresente = temPresente
         this.#selecionada = selecionada
         this.#aberta = aberta
     }
 
-    get numero (){
+    get numero() {
         return this.#numero
     }
-    get temPresente (){
+    get temPresente() {
         return this.#temPresente
     }
-    get selecionada (){
+    get selecionada() {
         return this.#selecionada
     }
-    get aberta (){
+    get aberta() {
         return this.#aberta
+    }
+    get fechada() {
+        return !this.#aberta
     }
 
     //se a porta tiver aberta, irá fechar e vice versa, modificando o atributo do objeto, como se fosse um metodo set
     //gera uma copia do objeto e não irá mexer no original
-    alternaSelecionada(){
+    alternaSelecionada() {
         const selecionada = !this.selecionada
         return new PortaModel(this.numero, this.temPresente, selecionada, this.#aberta)
     }
 
-    abrir(){
+    abrir() {
         const aberta = true
         return new PortaModel(this.numero, this.temPresente, this.selecionada, aberta)
     }
 
-    desselecionar(){
+    desselecionar() {
         const selecionada = false
         return new PortaModel(this.numero, this.temPresente, selecionada, this.#aberta)
     }
