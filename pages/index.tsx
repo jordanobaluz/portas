@@ -9,7 +9,8 @@ export default function Home() {
   return (
     <div style={{ display: "flex" }}>
       {/* pode ser passado definindo ou não a propriedades true e false */}
-      <Porta porta={p1} />
+      {/* olhar para o componente como um imput, onde é passado valor e modificado */}
+      <Porta value={p1} />
 
 
     </div>
