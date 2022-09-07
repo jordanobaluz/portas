@@ -33,7 +33,7 @@ export default function jogo() {
             </div>
             <div className={styles.botoes}>
                 <Link href="/">
-                    <button>Voltar</button>
+                    <button>Reiniciar Jogo</button>
                 </Link>
             </div>
         </div>

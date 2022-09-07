@@ -1,9 +1,14 @@
 .formulario {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background-color: #696969;
+}
+
+.formulario > div {
+    display: flex;
 }
 
 .link {
@@ -12,4 +17,5 @@
     align-items: center;
     flex: 1;
     margin: 0;
+    cursor: pointer;
 }
