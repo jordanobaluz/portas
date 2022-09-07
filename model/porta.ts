@@ -1,9 +1,9 @@
 export default class Porta {
     // atributo privado
-    #numero
-    #temPresente
-    #selecionada
-    #aberta
+    #numero: number
+    #temPresente: boolean
+    #selecionada: boolean
+    #aberta: boolean
 
     constructor(numero, temPresente = false, selecionada = false, aberta = false){
         this.#numero = numero
