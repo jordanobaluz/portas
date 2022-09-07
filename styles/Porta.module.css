@@ -14,6 +14,7 @@
     border-left: 5px solid brown;
     border-top: 5px solid brown;
     border-right: 5px solid brown;
+    background-color: #0009;
     width: 95%;
 }
 
@@ -24,8 +25,6 @@
     flex-grow: 1;
     background-color: chocolate;
     padding: 15px;
-    /* temp */
-   
 }
 
 .numero{
