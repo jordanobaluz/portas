@@ -5,7 +5,7 @@ import Porta from "../../../components/Porta"
 import { atualizarPortas, criarPortas } from "../../../functions/portas"
 import styles from "../../../styles/Jogo.module.css"
 
-export default function jogo() {
+export default function Jogo() {
     //router pega os parametros passados pela URL
     const router = useRouter()
     const [portas, setPortas] = useState([])
@@ -21,7 +21,7 @@ export default function jogo() {
 
         setValido(qtdePortasValida && temPresenteValido)
 
-    }, [portas])
+    }, [portas, router.query.portas, router.query.temPresente])
 
     //após ser montado vazio, será detectado os valores da url e chamado novamene
     useEffect(() => {
